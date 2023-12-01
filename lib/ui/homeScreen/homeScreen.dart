@@ -5,6 +5,7 @@ import 'package:news_app/ui/quranTap/quranTap.dart';
 import 'package:news_app/ui/radioTap/radioTap.dart';
 import 'package:news_app/ui/sebhaTap/sebhaTap.dart';
 import 'package:news_app/ui/settingsTap/settingsTap.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class homeScreen extends StatefulWidget {
   static const routName = "HomeScreen";
@@ -30,7 +31,7 @@ class _homeScreenState extends State<homeScreen> {
       child: Scaffold(
         appBar: AppBar(
           title:  Center(
-            child: Text("Islamy",style:Theme.of(context).textTheme.titleLarge,),
+            child: Text(AppLocalizations.of(context)!.islamy,style:Theme.of(context).textTheme.titleLarge,),
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -48,29 +49,29 @@ class _homeScreenState extends State<homeScreen> {
                     "assets/images/ic_quran.png",
                   ),
                 ),
-                label: "quran"),
+                label: AppLocalizations.of(context)!.quran),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: const ImageIcon(
                   AssetImage("assets/images/ic_hadeth.png"),
                 ),
-                label: "hadeth"),
+                label: AppLocalizations.of(context)!.hadeth),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: const ImageIcon(
                   AssetImage("assets/images/ic_sebha.png"),
                 ),
-                label: "Sebha"),
+                label: AppLocalizations.of(context)!.tasbeh),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: const ImageIcon(
                   AssetImage("assets/images/ic_radio.png"),
                 ),
-                label: "radio"),
+                label: AppLocalizations.of(context)!.radio),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
-                icon: Icon(Icons.settings),
-                label: "settings")
+                icon:const Icon(Icons.settings),
+                label: AppLocalizations.of(context)!.settings)
           ],
         ),
         body: Taps[selctedItme],
