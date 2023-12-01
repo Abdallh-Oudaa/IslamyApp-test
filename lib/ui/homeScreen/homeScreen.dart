@@ -41,7 +41,9 @@ class _homeScreenState extends State<homeScreen> {
               selctedItme = index;
             });
           },
+          elevation: 2,
           items: [
+            
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: const ImageIcon(
